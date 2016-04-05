@@ -13,12 +13,15 @@ while guess != number:
     guess = raw_input("%s please choose a number between 1 and 100. " % (name))
     if guess.isdigit():
         guess = int(guess)
-        if guess < number:
-            print "That was too low."
-        elif guess > number:
-            print "That was too high."
-        else: 
-            print "Good job, %s! %i was the number." % (name, guess)
+        if guess >= 1 and guess <= 100:
+            if guess < number:
+                print "That was too low."
+            elif guess > number:
+                print "That was too high."
+            else: 
+                print "Good job, %s! %i was the number." % (name, guess)
+        else:
+            print "Please choose a number between 1 and 100."
     else:
         print "Hey %s, %s is not a number." % (name, guess)
        
