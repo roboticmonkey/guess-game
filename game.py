@@ -5,6 +5,7 @@ import random
 print "Hi player!"
 name = raw_input("What is your name? ")
 game_try = raw_input("Do you want to play a game? Enter Y for Yes or hit any other key for No. ")
+# this is the lowest number of guesses made to reach correct number 
 high_score = None
 
 #this while loop controls if someone wants to play the game.
@@ -13,6 +14,7 @@ while game_try == "Y":
 # print number
     guess = 0
 # print guess
+    # this list keeps track of guesses made during one game 
     current_score = []
     
     # this while loop is the main game
@@ -33,6 +35,7 @@ while game_try == "Y":
                 else: 
                     print "Good job, %s! %i was the number." % (name, guess)
                     print "It took you %i guesses." % (len(current_score))
+                    # compare high score to current score, tells user if they have high score
                     if high_score == None:
                         high_score = len(current_score)
                     else:
