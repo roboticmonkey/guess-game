@@ -12,7 +12,7 @@ high_score = None
 while game_try == "Y":
     number = random.randint(1, 100)
 # print number
-    guess = 0
+    guess = None
 # print guess
     # this list keeps track of guesses made during one game 
     current_score = []
